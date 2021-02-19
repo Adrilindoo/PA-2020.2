@@ -1,0 +1,8 @@
+a) Válido
+b) Válido
+c) Inválido, pois aloha é do tipo float, portanto não pode receber o char "value"
+d) Válido
+e) Válido
+f) Válido
+g) Válido
+h) Válido

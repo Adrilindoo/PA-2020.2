@@ -1,0 +1,7 @@
+Todos os resultados obtidos foram esperados.
+
+O primeiro 'printf' mostrava o valor de i, ou seja, a ordem das linhas nas quais os resultados seriam impressos;
+O segundo 'printf' mostrava os valores anteriormente cadastrados no vetor;
+O terceiro 'printf' também mostrava os valores do vetor, porém acessando-os através do ponteiro f;
+O quarto 'printf' mostrava o caminho para o vetor em base hexadecimal;
+O quinto 'printf' também mostrava o caminho para o vetor em base hexadecimal.

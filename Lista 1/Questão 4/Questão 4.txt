@@ -1,0 +1,8 @@
+a) A atribuição é legal.
+b) A atribuição não é inteiramente legal. Um warning aparece e expõe que não houve operação de casting de (ponteiro de int) para (int), porém o programa ainda é executado.
+c) A atribuição é legal.
+d) A atribuição não é legal porque não há, verdadeiramente, uma expressão dentro dos parênteses.
+e) A atribuição é legal.
+f) A atribuição não é legal pois i é um inteiro e não um ponteiro para int; além disso, não se poderia utilizar dois '&'
+g) A atribuição não é inteiramente legal; 'q' é um ponteiro, portanto deveria receber apenas caminhos; Porém o programa ainda roda.
+h) A atribuição é legal.

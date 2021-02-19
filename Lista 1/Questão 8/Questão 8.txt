@@ -1,0 +1,10 @@
+Todas as expressões são válidas.
+
+p = mat + 1:
+    O ponteiro 'p' recebe o endereço do segundo elemento de mat
+
+p = mat:
+    O ponteiro 'p' recebe o endereço do primeiro elemento de mat
+
+x = (*mat):
+    A variável 'x' recebe o conteúdo do primeiro elemento de mat

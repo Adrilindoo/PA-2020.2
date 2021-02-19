@@ -1,0 +1,5 @@
+FFE -> 4094 em base decimal
+7 -> 5 + 2
+5 -> conteúdo do conteúdo do endereço de p, ou seja, o conteúdo do endereço guardado em p
+15 -> 3 * 5
+9 -> 5 + 4
