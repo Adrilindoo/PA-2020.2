@@ -1,0 +1,12 @@
+Tempo de execução médio da questão 14 = (0.0100 + 0.0100 + 0.0080 + 0.0060 + 0.0100)/5 = 0.0088 milissegundos
+Tempo de execução médio da questão 15 = (0.0070 + 0.0070 + 0.0080 + 0.0080 + 0.0090)/5 = 0.0078 milissegundos
+
+OBS: O tempos de execução foram medidos para operações com os valores->
+10, 1, 20, 5, 15 nessa mesma ordem
+
+O código da questão 15 acabou sendo ligeiramente mais rápido. Existem alguns fatores que podem levar a isso. Alguns deles são:
+    O tipo inteiro possui menos bytes, logo, talvez o código da 15 não precisou passar por tantos bytes "vazios" como na questão 14
+    A função qsort() trabalha com vários tipos de dados, então faz-se necessária a operação de casting para o tipo de dado necessário, e isso pode levar mais alguns nanossegundos
+
+Conclusão:
+    Um método geral é bom pois é único, mas quem sabe um pouco de tudo não se especializa em nada #CHUPAQSORT() :D
