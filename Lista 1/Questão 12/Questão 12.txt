@@ -1,1 +1,0 @@
-Um ponteiro para função pode ser utilizado que se precisa passar uma função como parâmetro para outra função

@@ -1,5 +1,0 @@
-Os ponteiros são utilizados para guardar endereços de memória.
-Suas aplicações são diversas, mas a principal é de economizar memória. Eles são utilizados, por exemplo,
-quando uma variável precisa ser acessada em diversas partes do programa; também são utilizados para
-fazer alocação dinâmica de memória, permitindo que o prgramador tenha toda a memória que precisar e nem
-um byte à mais.

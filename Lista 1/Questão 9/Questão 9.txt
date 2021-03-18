@@ -1,3 +1,0 @@
-O primeiro programa mostra os valores guardados no vetor 'vet';
-
-O segundo programa mostra os endereços de cada valor do vetor 'vet';.
