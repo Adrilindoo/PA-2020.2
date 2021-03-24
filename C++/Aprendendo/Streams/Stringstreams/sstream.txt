@@ -1,0 +1,6 @@
+adiante 30
+para
+direita 45
+atras 20
+para
+esquerda -45
