@@ -5,6 +5,8 @@
 using namespace std;
 
 int main(){
+ //Um projeto de Adriel Torquato e Thullyo Damasceno
+ 
  //CUBO MÁGICO PRATEADO
 
     /*//33x33x33 para ter espaço de colocar os cubos de apoio e as listras e ficar divisível por 3
