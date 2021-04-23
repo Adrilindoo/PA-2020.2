@@ -1,0 +1,5 @@
+NÃO USAR O MAKEFILE
+pode fazaer pelo terminal usando o seguinte comando:
+    g++ zmain.cpp -o zmain
+    ./zmain
+(a palavra zmain pode ser substituída, desde que o arquivo que contém a função main possua outro nome)
