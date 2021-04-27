@@ -7,5 +7,5 @@ PutSphere::PutSphere(int mx0, int my0, int mz0, int mradius, float mr, float mg,
 
 void PutSphere::draw(Sculptor &t){
     t.setColor(r, g, b, a);
-    t.putSphere(x0, y0, z0, r);
+    t.putSphere(x0, y0, z0, radius);
 }

@@ -7,14 +7,15 @@ using namespace std;
 
 class Interpretador{
     int nx, ny, nz;
+    int x0, y0, z0;
     float r, g, b, a;
     public:
     Interpretador();
     vector <FiguraGeometrica*> inter(string arquivo);
     void teste(string arquivo);
-    void getX();
-    void getY();
-    void getZ();
+    int getX();
+    int getY();
+    int getZ();
 };
 
 #endif // INTERPRETADOR_H

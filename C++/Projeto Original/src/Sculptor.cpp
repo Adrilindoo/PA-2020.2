@@ -222,9 +222,9 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
 
 void Sculptor::putSphere(int x0, int y0, int z0, int radius){
     float dx, dy, dz;
-    for (int i = 0; i < nx; i++){
-        for (int j = 0; j < ny; j++){
-            for (int k = 0; k < nz; k++){
+    for (int i = x0 - radius; i < x0 + radius; i++){
+        for (int j = y0 - radius; j < y0 + radius; j++){
+            for (int k = z0 - radius; k < z0 + radius; k++){
                 dx = pow (i - x0, 2);
                 dy = pow (j - y0, 2);
                 dz = pow (k - z0, 2);
@@ -238,14 +238,13 @@ void Sculptor::putSphere(int x0, int y0, int z0, int radius){
 
 void Sculptor::cutSphere(int x0, int y0, int z0, int radius){
     float dx, dy, dz;
-    for (int i = 0; i < nx; i++){
-        for (int j = 0; j < ny; j++){
-            for (int k = 0; k < nz; k++){
+    for (int i = x0 - radius; i < x0 + radius; i++){
+        for (int j = y0 - radius; j < y0 + radius; j++){
+            for (int k = z0 - radius; k < z0 + radius; k++){
                 dx = pow (i - x0, 2);
                 dy = pow (j - y0, 2);
                 dz = pow (k - z0, 2);
                 if ((dx + dy + dz) < pow(radius, 2)){
-                    //v[i][j][k].isOn = false;
                     cutVoxel(i,j,k);
                 }
             }
@@ -337,11 +336,6 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
                 dy = pow((j-ycenter), 2)/(pow(ry, 2));
                 dz = pow((k-zcenter), 2)/(pow(rz, 2));
                 if ((dx + dy + dz) < 1){
-                    /*v[i][j][k].isOn = true;
-                    v[i][j][k].r = r;
-                    v[i][j][k].g = g;
-                    v[i][j][k].b = b;
-                    v[i][j][k].a = a;*/
                     putVoxel(i,j,k);
                 }
             }
@@ -360,7 +354,6 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
                 dy = pow((j-ycenter), 2)/(pow(ry, 2));
                 dz = pow((k-zcenter), 2)/(pow(rz, 2));
                 if ((dx + dy + dz) <= 1){
-                    //v[i][j][k].isOn = false;
                     cutVoxel(i,j,k);
                 }
             }

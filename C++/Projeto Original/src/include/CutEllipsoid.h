@@ -5,7 +5,7 @@
 class CutEllipsoid : public FiguraGeometrica{
     int rx, ry, rz;
     public:
-        CutEllipsoid(int mx0, int my0, int mz0, int mrx, int mry, int mrz, float mr, float mg, float mb, float ma);
+        CutEllipsoid(int mx0, int my0, int mz0, int mrx, int mry, int mrz);
         void draw(Sculptor &t);
 };
 

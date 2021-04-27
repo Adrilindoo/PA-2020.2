@@ -33,18 +33,54 @@ vector <FiguraGeometrica*> Interpretador::inter(string arquivo){
             ss.str(s);
             ss >> s;
             if(s.compare("dim") == 0){
-                int x, y, z;
-                ss >> x >> y >> z;
-                //figs.push_back(new Sculptor(x, y, z));
+                ss >> nx >> ny >> nz;
+            }
+
+            if(s.compare("cutbox") == 0){
+                int x1, y1, z1;
+                ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1;
+                figs.push_back(new CutBox(x0, x1, y0, y1, z0, z1));
+            }
+            if(s.compare("putbox") == 0){
+                int x1, y1, z1;
+                ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1 >> r >> g >> b >> a; 
+                figs.push_back(new PutBox(x0, x1, y0, y1, z0, z1, r, g ,b, a));
+            }
+
+            if(s.compare("cutellipsoid") == 0){
+                int rx, ry, rz;
+                ss >> x0 >> y0 >> z0 >> rx >> ry >> rz;
+                figs.push_back(new CutEllipsoid(x0, y0, z0, rx, ry, rz));
+            }
+            if(s.compare("putellipsoid") == 0){
+                int rx, ry, rz;
+                ss >> x0 >> y0 >> z0 >> rx >> ry >> rz >> r >> g >> b >> a;
+                figs.push_back(new PutEllipsoid(x0, y0, z0, rx, ry, rz, r, g, b, a));
+            }
+
+            if (s.compare("cutsphere") == 0){
+                int radius;
+                ss >> x0 >> y0 >> z0 >> radius;
+                figs.push_back(new CutSphere(x0, y0, z0, radius));
+            }
+            if (s.compare("putsphere") == 0){
+                int radius;
+                ss >> x0 >> y0 >> z0 >> radius >> r >> g >> b >> a;
+                figs.push_back(new PutSphere(x0, y0, z0, radius, r, g, b, a));
+            }
+
+            if(s.compare("cutvoxel") == 0){
+                ss >> x0 >> y0 >> z0;
+                figs.push_back(new CutVoxel(x0, y0, z0));
             }
             if (s.compare("putvoxel") == 0){
-                int x, y, z;
-                ss >> x >> y >> z;
-                //figs.push_back(new PutVoxel(x, y, z, r, g, b, a));
+                ss >> x0 >> y0 >> z0 >> r >> g >> b >> a;
+                figs.push_back(new PutVoxel(x0, y0, z0, r, g, b, a));
             }
+            
         }
     }
-    return figs;
+    return (figs);
 }
 
 void Interpretador::teste(string arquivo){
@@ -80,14 +116,14 @@ void Interpretador::teste(string arquivo){
     fin.close();
 }
 
-/*void Interpretador::getX(){
+int Interpretador::getX(){
     return nx;
 }
 
-void Interpretador::getY(){
+int Interpretador::getY(){
     return ny;
 }
 
-void Interpretador::getZ(){
+int Interpretador::getZ(){
     return nz;
-}*/
+}
