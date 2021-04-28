@@ -1,0 +1,11 @@
+Alunos: Adriel Torquato e Thullyo Damasceno
+
+O projeto foi feito no vscode, por isso, precisei baixar uma extensão para poder compilar todos os 
+arquivos. A extensão é a "C/C++ Makefile Project", de Adriano Markovic.
+Essa extensão gera um arquivo chamado "Makefile" e vários arquivos ".d" que vêm dos arquivos ".cpp".
+Ela também gera um outro arquivo que, nesse caso, se chama "project". Os .cpp estão no diretório "src"
+e os headers estão no diretório "include", dentro do "src".
+
+Para construir da figura basta digitar o que quiser fazer no arquivo "aentrada.txt", salvar as alterações,
+abrir um terminal no mesmo diretório do arquivo "Makefile" e rodar os comandos "make", "./project" e 
+"geomview asaida.off".
