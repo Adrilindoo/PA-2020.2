@@ -1,4 +1,5 @@
 #include "include/Interpretador.h"
+#include <vector>
 
 int main(){
     Sculptor *build;
@@ -19,7 +20,7 @@ int main(){
 
     build -> writeOFF("asaida.off");
 
-    for(size_t i = figs.size(); i > 0; i--){
+    for(size_t i = 0; i < figs.size(); i++){
         delete figs[i];
     }
 

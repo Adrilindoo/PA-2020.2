@@ -83,6 +83,39 @@ vector <FiguraGeometrica*> Interpretador::inter(string arquivo){
     return (figs);
 }
 
+void Interpretador::teste(string arquivo){
+    ifstream fin;
+    string s;
+    stringstream ss;
+    fin.open(arquivo);
+    if(!fin.is_open()){
+        cout << "Não foi possível abrir o arquivo\n";
+        exit(0);
+    }
+    else{
+        cout << "Arquivo aberto com sucesso\n";
+        while(getline(fin, s)){
+            ss.clear();
+            ss.str(s);
+            ss >> s;
+            if(s.compare("dim") == 0){
+                int x, y, z;
+                ss >> x >> y >> z;
+                cout << "Definir dimensão: " << x << " em x, " << y << " em y, " << z << "em z\n";
+                //passar x, y, e z
+            }
+            if (s.compare("putvoxel") == 0){
+                int x, y, z;
+                float r, g, b, a;
+                ss >> x >> y >> z >> r >> g >> b >> a;
+                cout << "Colocar voxel de cor " << r << "R " << g << "G " << b << "B " << a << "A\n";
+                cout << "Na posição " << x << "X " << y << "Y " << z << "Z\n";
+            }
+        }
+    }
+    fin.close();
+}
+
 int Interpretador::getX(){
     return nx;
 }
